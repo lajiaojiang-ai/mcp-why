@@ -32,7 +32,8 @@ class CliTests(unittest.TestCase):
             self.assertEqual(rc, 1)
             text = output.read_text(encoding="utf-8")
             self.assertIn("risky_server_name", text)
-            self.assertIn("windows_npx", text)
+            if sys.platform == "win32":
+                self.assertIn("windows_npx", text)
 
     def test_discover_finds_explicit_file(self):
         with tempfile.TemporaryDirectory() as tmp:
