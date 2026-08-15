@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "Home Assistant (ha-mcp)": {
+      "command": "npx",
+      "args": ["-y", "fake-ha-mcp"]
+    }
+  }
+}

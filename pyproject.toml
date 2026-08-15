@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mcp-why"
+version = "0.1.0"
+description = "Explain why an MCP server is configured but missing, empty, or silent."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "lajiaojiang-ai" }]
+keywords = ["mcp", "model-context-protocol", "claude", "cursor", "diagnostics", "windows"]
+classifiers = [
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Environment :: Console",
+]
+[project.scripts]
+mcp-why = "mcp_why.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
