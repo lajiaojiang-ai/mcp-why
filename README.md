@@ -5,7 +5,7 @@
 
 Explain why an MCP server is configured but missing, empty, or silent.
 
-![mcp-why diagnosing a broken Claude Desktop MCP config](docs/demo.svg)
+![Before: Claude Desktop shows the server as connected with zero tools. After: mcp-why points at the exact cause.](docs/before-after.svg)
 
 Official inspectors test **servers**. Official `/doctor` often says nothing is wrong. `mcp-why` reads the **client config** and tells you the actual reason the tools never appeared.
 

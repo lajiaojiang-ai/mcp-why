@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="470" viewBox="0 0 960 470" role="img" aria-label="Before: Claude Desktop shows the MCP server as connected but zero tools. After: mcp-why points at the exact cause.">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="470" rx="14" fill="url(#bg)"/>
+
+  <!-- LEFT: confusing client state -->
+  <rect x="24" y="24" width="424" height="422" rx="10" fill="#161b22" stroke="#8b5cf6" stroke-opacity="0.45"/>
+  <circle cx="46" cy="46" r="5" fill="#ff5f56"/>
+  <circle cx="64" cy="46" r="5" fill="#ffbd2e"/>
+  <circle cx="82" cy="46" r="5" fill="#27c93f"/>
+  <text x="106" y="51" font-family="Consolas, monospace" font-size="13" fill="#8b949e">Claude Desktop — MCP servers</text>
+
+  <rect x="44" y="72" width="384" height="52" rx="8" fill="#0d1117" stroke="#30363d"/>
+  <circle cx="64" cy="98" r="6" fill="#27c93f"/>
+  <text x="80" y="95" font-family="Consolas, monospace" font-size="13" fill="#e6edf3">Home Assistant (ha-mcp)</text>
+  <text x="80" y="112" font-family="Consolas, monospace" font-size="11" fill="#3fb950">Connected</text>
+
+  <text x="44" y="160" font-family="Consolas, monospace" font-size="13" fill="#8b949e">Tools</text>
+  <rect x="44" y="172" width="384" height="150" rx="8" fill="#0d1117" stroke="#30363d" stroke-dasharray="5 4"/>
+  <text x="236" y="242" text-anchor="middle" font-family="Consolas, monospace" font-size="15" fill="#8b949e">0 tools</text>
+  <text x="236" y="266" text-anchor="middle" font-family="Consolas, monospace" font-size="11" fill="#6e7681">connected… but nothing to call</text>
+
+  <text x="44" y="360" font-family="Consolas, monospace" font-size="12" fill="#6e7681">/doctor: no issues found</text>
+  <text x="44" y="384" font-family="Consolas, monospace" font-size="12" fill="#6e7681">logs: initialize OK, tools/list OK</text>
+  <text x="44" y="424" text-anchor="start" font-family="Consolas, monospace" font-size="14" fill="#f0883e">???</text>
+
+  <!-- CENTER arrow -->
+  <text x="480" y="245" text-anchor="middle" font-family="Consolas, monospace" font-size="26" fill="#58a6ff">$ mcp-why</text>
+  <text x="480" y="272" text-anchor="middle" font-family="Consolas, monospace" font-size="20" fill="#58a6ff">→</text>
+
+  <!-- RIGHT: terminal answer -->
+  <rect x="512" y="24" width="424" height="422" rx="10" fill="#0d1117" stroke="#30363d"/>
+  <circle cx="534" cy="46" r="5" fill="#ff5f56"/>
+  <circle cx="552" cy="46" r="5" fill="#ffbd2e"/>
+  <circle cx="570" cy="46" r="5" fill="#27c93f"/>
+  <text x="592" y="51" font-family="Consolas, monospace" font-size="13" fill="#8b949e">terminal</text>
+
+  <text x="532" y="88" font-family="Consolas, monospace" font-size="13" fill="#e6edf3">$ mcp-why</text>
+  <text x="532" y="116" font-family="Consolas, monospace" font-size="12" fill="#8b949e">1 config, 1 server, 1 error</text>
+
+  <text x="532" y="150" font-family="Consolas, monospace" font-size="13" fill="#f85149">[ERROR] risky_server_name</text>
+  <text x="532" y="172" font-family="Consolas, monospace" font-size="12" fill="#e6edf3">server key 'Home Assistant (ha-mcp)'</text>
+  <text x="532" y="190" font-family="Consolas, monospace" font-size="12" fill="#e6edf3">contains parentheses</text>
+  <text x="532" y="216" font-family="Consolas, monospace" font-size="12" fill="#8b949e">client silently drops every tool</text>
+  <text x="532" y="234" font-family="Consolas, monospace" font-size="12" fill="#8b949e">when the key has ( ) or [ ]</text>
+
+  <rect x="524" y="258" width="396" height="54" rx="8" fill="#12261e" stroke="#238636"/>
+  <text x="540" y="280" font-family="Consolas, monospace" font-size="12" fill="#3fb950">fix: rename the key to letters,</text>
+  <text x="540" y="298" font-family="Consolas, monospace" font-size="12" fill="#3fb950">numbers, hyphen or underscore</text>
+
+  <text x="532" y="352" font-family="Consolas, monospace" font-size="12" fill="#8b949e">also checks: raw npx on Windows,</text>
+  <text x="532" y="370" font-family="Consolas, monospace" font-size="12" fill="#8b949e">NVM paths, broken JSON, uv caches</text>
+
+  <text x="532" y="424" font-family="Consolas, monospace" font-size="14" fill="#3fb950">cause found in seconds ✓</text>
+</svg>
